@@ -14,3 +14,12 @@ class ProductManager:
             product.price * product.quantity 
             for product in self.products
             )
+
+    def remove_product(self,name):
+        for product in self.products:
+            if product.name == name:
+                self.products.remove(product)
+                return True
+        return False
+
+    
